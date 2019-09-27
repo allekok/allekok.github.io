@@ -12,16 +12,31 @@ h1, h2, p
 }
 body
 {
-    background:#eee;
-    color:#444;
+    background:linear-gradient(90deg,
+			       #f0a 0% , #f0a 16%,
+			       #fff 16%, #fff 17%,
+			       #0af 17%, #0af 33%,
+			       #fff 33%, #fff 34%,
+			       #0fa 34%, #0fa 50%,
+			       #fff 50%, #fff 51%,
+			       #af0 51%, #af0 67%,
+			       #fff 67%, #fff 68%,
+			       #a0f 68%, #a0f 84%,
+			       #fff 84%, #fff 85%,
+			       #fa0 85%, #fa0 100%);
+    color:#fff;
     margin:0;
     padding:4em 1em;
     position:relative;
 }
 a
 {
-    color:#06f;
+    color:#cf0;
     text-decoration:none;
+}
+a:hover
+{
+    color:#fff;
 }
 #main
 {
@@ -107,7 +122,7 @@ header h1
 header
 {
     text-align:center;
-    font-size:2em;
+    font-size:2.2em;
     max-width:1000px;
     margin:auto;
 }
@@ -125,6 +140,7 @@ footer
     text-align:left;
     max-width:1000px;
     margin:auto;
+    font-size:1.1em
 }
 .wrong
 {
@@ -133,45 +149,44 @@ footer
 .ok
 {
     color:green;
-}
-body::before, body::after
-{
-    content:'';
-    position:absolute;
-    left:0;
-    width:100%;
-    height:3em;
-    background:linear-gradient(90deg,
-			       #f05 0%, #f05 16%,
-			       #eee 16%, #eee 17%,
-			       #0f5 17%, #0f5 33%,
-			       #eee 33%, #eee 34%,
-			       #05f 34%, #05f 50%,
-			       #eee 50%, #eee 51%,
-			       #f50 51%, #f50 67%,
-			       #eee 67%, #eee 68%,
-			       #50f 68%, #50f 84%,
-			       #eee 84%, #eee 85%,
-			       #0f9 85%, #0f9 100%);
-}
-body::before
-{
-    top:0;
-}
-body::after
-{
-    bottom:0;
-}
+}    
 ul
 {
     list-style-type: none;
     padding:0;
 }
-.tool-title
-{
-    display:inline-block;
-}
 .tool
 {
-    padding:.7em 0;
+    padding:0 0 2em;
+    position:relative;
+}
+.tool-title
+{
+    font-size:1.2em;
+    display:inline-block;
+    padding-right:2.3em;
+}
+.tool-desc
+{
+    font-size:1.1em;
+    padding-right:1em;
+    padding-top:.5em;
+}
+#cover
+{
+    position:fixed;
+    background:rgba(0,0,0,0.8);
+    width:100%;height:100%;
+    top:0;left:0;
+    z-index:-999;
+}
+.flower
+{
+    position:absolute;
+    width:3em;height:3em;
+    top:-.65em;right:0;
+    border-radius:50%;
+    transform: scale(.15) rotate(-20deg);
+    background: rgba(204,255,0,.3);
+    box-shadow: -38px 0 0 #cf0, 0 -38px 0 rgba(204,255,0,.7), 38px 0 0 #cf0, 0 38px 0 rgba(204,255,0,.7);
 }
