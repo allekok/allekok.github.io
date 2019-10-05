@@ -12,31 +12,23 @@ h1, h2, p
 }
 body
 {
-    background:linear-gradient(90deg,
-			       #f0a 0% , #f0a 16%,
-			       #fff 16%, #fff 17%,
-			       #0af 17%, #0af 33%,
-			       #fff 33%, #fff 34%,
-			       #0fa 34%, #0fa 50%,
-			       #fff 50%, #fff 51%,
-			       #af0 51%, #af0 67%,
-			       #fff 67%, #fff 68%,
-			       #a0f 68%, #a0f 84%,
-			       #fff 84%, #fff 85%,
-			       #fa0 85%, #fa0 100%);
-    color:#fff;
+    background:url('src/frontend/style/logo.png') no-repeat;
+    background-size:80%;
+    background-position:bottom left;
+    background-attachment:fixed;
+    color:#000;
     margin:0;
     padding:4em 1em;
     position:relative;
 }
 a
 {
-    color:#cf0;
+    color:#000;
     text-decoration:none;
 }
-a:hover
+a:hover, .tool-title:hover
 {
-    color:#fff;
+    color:#000;
 }
 #main
 {
@@ -164,7 +156,8 @@ ul
 {
     font-size:1.2em;
     display:inline-block;
-    padding-right:2.3em;
+    padding-right:2em;
+    color:#00e;
 }
 .tool-desc
 {
@@ -175,18 +168,8 @@ ul
 #cover
 {
     position:fixed;
-    background:rgba(0,0,0,0.8);
+    background:rgba(255,255,255,0.75);
     width:100%;height:100%;
     top:0;left:0;
     z-index:-999;
-}
-.flower
-{
-    position:absolute;
-    width:3em;height:3em;
-    top:-.65em;right:0;
-    border-radius:50%;
-    transform: scale(.15) rotate(-20deg);
-    background: rgba(204,255,0,.3);
-    box-shadow: -38px 0 0 #cf0, 0 -38px 0 rgba(204,255,0,.7), 38px 0 0 #cf0, 0 38px 0 rgba(204,255,0,.7);
 }
