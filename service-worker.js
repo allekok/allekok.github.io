@@ -6,6 +6,7 @@ self.addEventListener('install', function(event) {
 	caches.open(cache_ver).then(function(cache) {
 	    return cache.addAll([
 		'/src/frontend/style/DroidNaskh-Regular.woff2',
+		'/src/frontend/style/logo.png',
 	    ]);
 	}));
 });
