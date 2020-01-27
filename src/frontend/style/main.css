@@ -134,14 +134,6 @@ footer
     margin:auto;
     font-size:1.1em
 }
-.wrong
-{
-    border-bottom:2px solid red;
-}
-.ok
-{
-    color:green;
-}    
 ul
 {
     list-style-type: none;

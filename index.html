@@ -150,14 +150,6 @@ footer
     margin:auto;
     font-size:1.1em
 }
-.wrong
-{
-    border-bottom:2px solid red;
-}
-.ok
-{
-    color:green;
-}    
 ul
 {
     list-style-type: none;
@@ -335,6 +327,13 @@ ul
 		کۆد
 	    </a>
 	</footer>
-	
+	<script>/* Night mode */
+const D = new Date;
+const h = D.getHours();
+if((h >= 0 && h <= 5) || h >= 9)
+{
+    document.body.style.filter = "invert(1)";
+}
+</script>
     </body>
 </html>
