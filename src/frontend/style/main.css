@@ -114,7 +114,7 @@ header h1
 header
 {
     text-align:center;
-    font-size:2.2em;
+    font-size:2.3em;
     max-width:1000px;
     margin:auto;
 }
@@ -141,26 +141,26 @@ ul
 }
 .tool
 {
-    padding:0 0 2em;
+    padding:1em 0;
     position:relative;
+    border-bottom:1px dashed #eee;
 }
 .tool-title
 {
-    font-size:1.2em;
+    font-size:1.45em;
     display:inline-block;
-    padding-right:2em;
-    color:#00e;
 }
 .tool-desc
 {
-    font-size:1.1em;
+    color:#222;
+    font-size:.95em;
     padding-right:1em;
-    padding-top:.5em;
+    display:inline-block;
 }
 #cover
 {
     position:fixed;
-    background:rgba(255,255,255,0.75);
+    background:rgba(255,255,255,0.95);
     width:100%;height:100%;
     top:0;left:0;
     z-index:-999;
