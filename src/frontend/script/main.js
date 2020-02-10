@@ -1,7 +1,7 @@
 /* Night mode */
 const D = new Date;
 const h = D.getHours();
-if((h >= 0 && h <= 5) || h >= 21)
+if(!(h > 6 && h < 18))
 {
     document.body.style.filter = "invert(1)";
 }
