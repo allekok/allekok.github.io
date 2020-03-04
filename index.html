@@ -2,8 +2,8 @@
 <html dir="rtl" lang="ckb">
     <head>
 	<title>ئاڵەکۆک</title>
-	<meta charset="utf-8" >
-	<meta name="viewport" content="width=device-width, initial-scale=1" >
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script>
     if ('serviceWorker' in navigator)
 	navigator.serviceWorker.register('/service-worker.js', {scope: '/'}); </script>
@@ -14,6 +14,14 @@
     font-style:normal;
     font-weight:400;
     src:url('src/frontend/style/DroidNaskh-Regular.woff2') format('woff2');
+}
+@font-face
+{
+    font-family:'icon';
+    font-display:swap;
+    font-style:normal;
+    font-weight:400;
+    src:url('src/frontend/style/Material-Icons.woff2') format('woff2');
 }
 *
 {
@@ -28,13 +36,9 @@ h1, h2, p
 }
 body
 {
-    background:url('src/frontend/style/logo.png') no-repeat;
-    background-size:85%;
-    background-position:bottom left;
-    background-attachment:fixed;
     color:#000;
     margin:0;
-    padding:4em 1em;
+    padding:1em;
     position:relative;
 }
 a
@@ -155,187 +159,131 @@ ul
     list-style-type: none;
     padding:0;
 }
+ul li:nth-child(odd) {
+    background:#eee;
+}
 .tool
 {
+    display:flex;
     padding:1em 0;
-    position:relative;
-    border-bottom:1px dashed #eee;
 }
 .tool-title
 {
-    font-size:1.45em;
     display:inline-block;
+    padding-right:1em;
 }
 .tool-desc
 {
     color:#222;
     font-size:.95em;
-    padding-right:1em;
+    padding:0 1em;
     display:inline-block;
+    width:100%;
+}
+.tool-link
+{
+    width:35%;
 }
 #cover
 {
     position:fixed;
-    background:rgba(255,255,255,0.8);
     width:100%;height:100%;
     top:0;left:0;
     z-index:-999;
 }
+.icon
+{
+    font-family:icon;
+    vertical-align:middle;
+    display:inline-block;
+    font-style:normal;
+}
+.tool-repo
+{
+    font-size:1.2em;
+    width:13%;
+}
 </style>
     </head>
     <body>
-	<div id="cover"></div>
 	<header>
 	    <h1>بەرنامەکانی ئاڵەکۆک</h1>
 	</header>
-	<main id="main">
-	    <ul>
-		<li>
-		    <div class="tool">
-			<a class="tool-link" href="https://allekok.com/">
-			    <img class="tool-logo">
-			    <h2 class="tool-title">
-				ئاڵەکۆک
-			    </h2>
-			</a>
-			<p class="tool-desc">
-			    شێعری شاعیرانی کورد
-			</p>
-		    </div>
-		</li>
-		<li>
-		    <div class="tool">
-			<a class="tool-link" href="https://allekok.com/tewar/">
-			    <img class="tool-logo">
-			    <h2 class="tool-title">
-				تەوار - وەشانی ٢.٠
-			    </h2>
-			</a>
-			<p class="tool-desc">
-			    گەڕان بۆ واتای وشە لە چەند فەرهەنگ‌دا
-			</p>
-		    </div>
-		</li>
-		<li>
-		    <div class="tool">
-			<a class="tool-link" href="https://allekok.com/tewar-legacy/">
-			    <img class="tool-logo">
-			    <h2 class="tool-title">
-				تەوار
-			    </h2>
-			</a>
-			<p class="tool-desc">
-			    گەڕان بۆ واتای وشە لە چەند فەرهەنگی ئانلاین‌دا
-			</p>
-		    </div>
-		</li>
-		<li>
-		    <div class="tool">
-			<a class="tool-link" href="https://allekok.com/rebwar">
-			    <img class="tool-logo">
-			    <h2 class="tool-title">
-				ڕێبوار
-			    </h2>
-			</a>
-			<p class="tool-desc">
-			    گەڕان بۆ ڕێنووسی دروستی وشە
-			</p>
-		    </div>
-		</li>
-		<li>
-		    <div class="tool">
-			<a class="tool-link" href="https://allekok.github.io/chepke-gull/#.">
-			    <img class="tool-logo">
-			    <h2 class="tool-title">
-				چەپکەگوڵ
-			    </h2>
-			</a>
-			<p class="tool-desc">
-			    گوڵنامەی کوردی
-			</p>
-		    </div>
-		</li>
-		<li>
-		    <div class="tool">
-			<a class="tool-link" href="https://allekok.github.io/xile-derzi/#.">
-			    <img class="tool-logo">
-			    <h2 class="tool-title">
-				خلەدەرزی
-			    </h2>
-			</a>
-			<p class="tool-desc">
-			    بەرهەمەکانی بەیت‌بێژ، خلەدەرزی
-			</p>
-		    </div>
-		</li>
-		<li>
-		    <div class="tool">
-			<a class="tool-link" href="https://allekok.github.io/zirek/#.">
-			    <img class="tool-logo">
-			    <h2 class="tool-title">
-				زیرەک
-			    </h2>
-			</a>
-			<p class="tool-desc">
-			    بەرهەمەکانی حەسەن زیرەک
-			</p>
-		    </div>
-		</li>
-		<li>
-		    <div class="tool">
-			<a class="tool-link" href="https://allekok.github.io/tahir-tofiq/#.">
-			    <img class="tool-logo">
-			    <h2 class="tool-title">
-				تاهیر تۆفیق
-			    </h2>
-			</a>
-			<p class="tool-desc">
-			    بەرهەمەکانی تاهیر تۆفیق
-			</p>
-		    </div>
-		</li>
-		<li>
-		    <div class="tool">
-			<a class="tool-link" href="https://allekok.github.io/eli-merdan/#.">
-			    <img class="tool-logo">
-			    <h2 class="tool-title">
-				عەلی مەردان
-			    </h2>
-			</a>
-			<p class="tool-desc">
-			    بەرهەمەکانی عەلی مەردان
-			</p>
-		    </div>
-		</li>
-		<li>
-		    <div class="tool">
-			<a class="tool-link" href="https://allekok.github.io/mamle/#.">
-			    <img class="tool-logo">
-			    <h2 class="tool-title">
-				ماملێ
-			    </h2>
-			</a>
-			<p class="tool-desc">
-			    بەرهەمەکانی محەممەدی ماملێ
-			</p>
-		    </div>
-		</li>
-	    </ul>
-	</main>
+	<main id="main"></main>
 	<footer>
-	    <a href="https://github.com/allekok/allekok.github.io/">
-		کۆد
-	    </a>
+	    <a href="https://github.com/allekok/allekok.github.io"
+	    >کۆد</a>
 	</footer>
-	<script>/* Night mode */
+	<script>/* Listeners */
+window.addEventListener("load", function () {
+    /* Night */
+    const D = new Date;
+    const h = D.getHours();
+    if(!(h > 6 && h < 18))
+	dark();
+    /* Paint */
+    const targetEl = document.querySelector("#main");
+    const repos = [
+	["ئاڵەکۆک", "https://allekok.com/",
+	 "شێعری شاعیرانی کورد",
+	 "https://github.com/allekok/www.allekok.com"],
+	["تەوار - وەشانی ٢.٠", "https://allekok.com/tewar/",
+	 "گەڕان بۆ واتای وشە لە چەند فەرهەنگ‌دا",
+	 "https://github.com/allekok/tewar-2"],
+	["تەوار", "https://allekok.com/tewar-legacy/",
+	 "گەڕان بۆ واتای وشە لە چەند فەرهەنگی ئانلاین‌دا",
+	 "https://github.com/allekok/tewar-legacy"],
+	["ڕێبوار", "https://allekok.com/rebwar/",
+	 "گەڕان بۆ ڕێنووسی دروستی وشە",
+	 "https://github.com/allekok/rebwar"],
+	["چەپکەگوڵ", "https://allekok.github.io/chepke-gull/#.",
+	 "گوڵنامەی کوردی",
+	 "https://github.com/allekok/chepke-gull"],
+	["خلەدەرزی", "https://allekok.github.io/xile-derzi/#.",
+	 "بەرهەمەکانی بەیت‌بێژ خلەدەرزی",
+	 "https://github.com/allekok/xile-derzi"],
+	["زیرەک", "https://allekok.github.io/zirek/#.",
+	 "بەرهەمەکانی حەسەن زیرەک",
+	 "https://github.com/allekok/zirek"],
+	["تاهیر تۆفیق", "https://allekok.github.io/tahir-tofiq/#.",
+	 "بەرهەمەکانی تاهیر تۆفیق",
+	 "https://github.com/allekok/tahir-tofiq"],
+	["عەلی مەردان", "https://allekok.github.io/eli-merdan/#.",
+	 "بەرهەمەکانی عەلی مەردان",
+	 "https://github.com/allekok/eli-merdan"],
+	["ماملێ", "https://allekok.github.io/mamle/#.",
+	 "بەرهەمەکانی محەممەدی ماملێ",
+	 "https://github.com/allekok/mamle"],
+    ];
+    paint(repos, targetEl);
+});
+/* Functions */
 function dark ()
 {
     document.body.style.filter = "invert(1)";
+    document.body.style.background = "#222";
 }
-const D = new Date;
-const h = D.getHours();
-if(!(h > 6 && h < 18))
-    dark();
+function paint (repos, targetEl) {
+    let html = "<ul>";
+    for(const repo of repos) {
+	html += `<li>
+		    <div class="tool">
+			<a class="tool-link" href="${repo[1]}">
+			    <h2 class="tool-title">
+				${repo[0]}
+			    </h2>
+			</a>
+			<p class="tool-desc">
+			    ${repo[2]}
+			</p>
+			<a class="tool-repo" href="${repo[3]}"
+                        ><i class="icon">code</i></a>
+		    </div>
+		</li>`;
+    }
+    html += "</ul>";
+    targetEl.innerHTML = html;
+}
 </script>
     </body>
 </html>

@@ -33,6 +33,18 @@ const _font_decl = "@font-face
     font-weight:400;
     src:url('"._font_path."') format('woff2');
 }";
+const _font_decl_icon_needle = '{FONT_DECL_ICON}';
+const _font_icon_needle = '{FONT_ICON}';
+const _font_icon_path = 'src/frontend/style/Material-Icons.woff2';
+const _font_icon_name = 'icon';
+const _font_icon_decl = "@font-face
+{
+    font-family:'"._font_icon_name."';
+    font-display:swap;
+    font-style:normal;
+    font-weight:400;
+    src:url('"._font_icon_path."') format('woff2');
+}";
 
 /* Make */
 $scripts = '';
@@ -52,8 +64,10 @@ if(_style)
 	$font_decl = '';
 	$font_name = '';
     }
-    $styles = str_replace([_font_decl_needle, _font_needle],
-			  [$font_decl,$font_name], $styles);
+    $styles = str_replace([_font_decl_needle, _font_needle,
+			   _font_decl_icon_needle, _font_icon_needle],
+			  [$font_decl, $font_name,
+			   _font_icon_decl, _font_icon_name], $styles);
     $styles = '<style>'.$styles.'</style>';
 }
 
