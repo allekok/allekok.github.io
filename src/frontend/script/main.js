@@ -43,7 +43,7 @@ paint(repos, targetEl);
 function dark ()
 {
     document.body.style.filter = "invert(1)";
-    document.body.style.background = "#222";
+    document.body.style.background = "#333";
 }
 function paint (repos, targetEl) {
     let html = "<ul>";
