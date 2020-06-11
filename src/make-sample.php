@@ -1,5 +1,45 @@
 <?php
 /* Constants */
+const repos = [
+	["ئاڵەکۆک", "https://allekok.ir/",
+	 "شێعری شاعیرانی کورد",
+	 "https://github.com/allekok/allekok-website"],
+	["وەشانی ساکاری ئاڵەکۆک",
+	 "https://allekok.github.io/allekok-poems/",
+	 "شێعرەکانی ئاڵەکۆک",
+	 "https://github.com/allekok/allekok-poems"],
+	["ڕادیۆ", "https://allekok.github.io/radio/",
+	 "گۆرانیی کوردی",
+	 "https://github.com/allekok/radio"],
+	["تەوار - وەشانی ٢.٠", "https://allekok.ir/tewar/",
+	 "گەڕان بۆ واتای وشە لە چەند فەرهەنگ‌دا",
+	 "https://github.com/allekok/tewar-2"],
+	["تەوار", "https://allekok.ir/tewar-legacy/",
+	 "گەڕان بۆ واتای وشە لە چەند فەرهەنگی ئانلاین‌دا",
+	 "https://github.com/allekok/tewar-legacy"],
+	["ڕێبوار", "https://allekok.ir/rebwar/",
+	 "گەڕان بۆ ڕێنووسی دروستی وشە",
+	 "https://github.com/allekok/rebwar"],
+	["چەپکەگوڵ", "https://allekok.github.io/chepke-gull/#.",
+	 "گوڵنامەی کوردی",
+	 "https://github.com/allekok/chepke-gull"],
+	["خدر قادری", "https://allekok.github.io/xdr-qadri/#.",
+	 "بەرهەمەکانی بەیت‌بێژ خدر قادری",
+	 "https://github.com/allekok/xile-derzi"],
+	["زیرەک", "https://allekok.github.io/zirek/#.",
+	 "بەرهەمەکانی حەسەن زیرەک",
+	 "https://github.com/allekok/zirek"],
+	["تاهیر تۆفیق", "https://allekok.github.io/tahir-tofiq/#.",
+	 "بەرهەمەکانی تاهیر تۆفیق",
+	 "https://github.com/allekok/tahir-tofiq"],
+	["عەلی مەردان", "https://allekok.github.io/eli-merdan/#.",
+	 "بەرهەمەکانی عەلی مەردان",
+	 "https://github.com/allekok/eli-merdan"],
+	["ماملێ", "https://allekok.github.io/mamle/#.",
+	 "بەرهەمەکانی محەممەد ماملێ",
+	 "https://github.com/allekok/mamle"],
+];
+
 const _files = [
 	[
 		'out'=>'../index.html',
@@ -9,7 +49,6 @@ const _files = [
 
 const _script = true;
 const _script_needle = '{SCRIPT}';
-const _script_path = 'frontend/script/main.js';
 
 const _style = true;
 const _style_needle = '{STYLE}';
@@ -73,7 +112,29 @@ if(_style)
 
 if(_script)
 {
-	$scripts = '<script>'.file_get_contents(_script_path).'</script>';
+	/* Paint */
+	function paint ($repos) {
+		$html = "<ul>";
+		foreach($repos as $repo) {
+			$html .= "<li>
+			<div class='tool'>
+                        <a class='tool-repo' href='{$repo[3]}'
+                        ><i class='icon'>&lsaquo;&rsaquo;</i></a>
+			<a class='tool-link' href='{$repo[1]}'>
+			<h2 class='tool-title'>
+			{$repo[0]}
+			</h2>
+			</a>
+			<p class='tool-desc'>
+			{$repo[2]}
+			</p>
+			</div>
+			</li>";
+		}
+		$html .= "</ul>";
+		return $html;
+	}
+	$scripts = paint(repos);
 }
 
 if(_service_worker)

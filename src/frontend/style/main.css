@@ -1,5 +1,4 @@
 {FONT_DECL}
-{FONT_DECL_ICON}
 *
 {
 	box-sizing:border-box;
@@ -13,14 +12,15 @@ h1, h2, p
 }
 body
 {
-	color:#000;
+	font-size:13px;
+	color:#222;
 	margin:0;
-	padding:1em;
+	padding:.5em;
 	position:relative;
 }
 a
 {
-	color:#000;
+	color:#222;
 	text-decoration:none;
 }
 a:hover, .tool-title:hover
@@ -29,7 +29,6 @@ a:hover, .tool-title:hover
 }
 #main
 {
-	max-width:800px;
 	margin:auto;
 }
 button
@@ -39,38 +38,21 @@ button
 	transition:all .2s ease;
 	-webkit-transition:all .2s ease;
 }
-button
-{
-	display:block;
-	outline:0;
-	border:0;
-	border-radius:1em;
-	margin:1em auto;
-	padding:1em 2em;
-	background:none;
-	border:2px solid;
-}
-button:hover
-{
-	border-color:#070;
-}
 header h1
 {
 	display:inline-block;
-	margin:.2em 0 0;
+	margin:.5em 0 0;
 }
 header
 {
 	text-align:center;
 	font-size:2.3em;
-	max-width:1000px;
 	margin:auto;
 }
 footer
 {
 	padding:0 1em;
 	text-align:left;
-	max-width:1000px;
 	margin:auto;
 	font-size:1.1em
 }
@@ -82,17 +64,18 @@ ul
 .tool
 {
 	display:flex;
-	padding:1em 0;
+	padding:.5em 0;
+	border-bottom:1px solid
 }
 .tool-title
 {
 	color:#070;
 	display:inline-block;
-	padding-right:1em;
+	padding-right:.5em;
 }
 .tool-desc
 {
-	color:#222;
+	margin:auto;
 	font-size:.95em;
 	padding:0 1em;
 	display:inline-block;
@@ -100,20 +83,21 @@ ul
 }
 .tool-link
 {
-	width:35%;
+	margin:auto;
+	min-width:35%;
 }
 .icon
 {
-	font-family:{FONT_ICON};
-	vertical-align:middle;
 	display:inline-block;
 	font-style:normal;
+	font-size: 1.3em;
+	letter-spacing: 2px;
 }
 .tool-repo
 {
 	text-align:center;
 	font-size:1.2em;
-	width:13%;
+	width:6%;
 }
 ::selection
 {
@@ -127,4 +111,12 @@ ul
 ::-webkit-scrollbar-thumb
 {
 	background:#070;
+}
+@media only screen and (min-width:600px)
+{
+	body
+	{
+		font-size:16px;
+		padding:1em;
+	}
 }
