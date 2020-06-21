@@ -38,6 +38,9 @@ const repos = [
 	["ماملێ", "https://allekok.github.io/mamle/#.",
 	 "بەرهەمەکانی محەممەد ماملێ",
 	 "https://github.com/allekok/mamle"],
+	["گۆڕینی ئەلفوبێ", "https://allekok.github.io/kurdish-transliterator/",
+	 "گۆڕینی ئەلفوبێی نووسراوەی کوردی لە عەرەبی بۆ لاتین و فارسی",
+	 "https://github.com/allekok/kurdish-transliterator"],
 ];
 
 const _files = [
