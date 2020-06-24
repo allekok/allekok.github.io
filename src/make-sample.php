@@ -41,6 +41,9 @@ const repos = [
 	["گۆڕینی ئەلفوبێ", "https://allekok.github.io/kurdish-transliterator/",
 	 "گۆڕینی ئەلفوبێی نووسراوەی کوردی لە عەرەبی بۆ لاتین و فارسی",
 	 "https://github.com/allekok/kurdish-transliterator"],
+	["ڕۆژژمێری کوردی", "https://allekok.github.io/kurdish-calendar/",
+	 "نیشاندانی ڕێکەوتی ئەمڕۆ + گۆڕینی ڕێکەوتەکانی کوردی، گریگۆری، ئێرانی و ئیسلامی بۆ یەکتر",
+	 "https://github.com/allekok/kurdish-calendar"],
 ];
 
 const _files = [
