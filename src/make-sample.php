@@ -4,14 +4,10 @@ const repos = [
 	["ئاڵەکۆک", "https://allekok.ir/",
 	 "شێعری شاعیرانی کورد",
 	 "https://github.com/allekok/allekok-website"],
-	["وەشانی ساکاری ئاڵەکۆک",
-	 "https://allekok.github.io/allekok-poems/",
-	 "شێعرەکانی ئاڵەکۆک",
-	 "https://github.com/allekok/allekok-poems"],
 	["ڕادیۆ", "https://allekok.github.io/radio/",
 	 "گۆرانیی کوردی",
 	 "https://github.com/allekok/radio"],
-	["تەوار - وەشانی ٢.٠", "https://allekok.ir/tewar/",
+	["تەوار - وەشانی ٢", "https://allekok.ir/tewar/",
 	 "گەڕان بۆ واتای وشە لە چەند فەرهەنگ‌دا",
 	 "https://github.com/allekok/tewar-2"],
 	["تەوار", "https://allekok.ir/tewar-legacy/",
@@ -20,15 +16,18 @@ const repos = [
 	["ڕێبوار", "https://allekok.ir/rebwar/",
 	 "گەڕان بۆ ڕێنووسی دروستی وشە",
 	 "https://github.com/allekok/rebwar"],
+	["ڕۆژژمێری کوردی", "https://allekok.github.io/kurdish-calendar/",
+	 "نیشاندانی ڕێکەوتی ئەمڕۆ + گۆڕینی ڕێکەوتەکانی کوردی، گریگۆری، ئێرانی و ئیسلامی بۆ یەکتر",
+	 "https://github.com/allekok/kurdish-calendar"],
+	["گۆڕینی ئەلفوبێ", "https://allekok.github.io/kurdish-transliterator/",
+	 "گۆڕینی ئەلفوبێی نووسراوەی کوردی لە عەرەبی بۆ لاتین و فارسی",
+	 "https://github.com/allekok/kurdish-transliterator"],
 	["تاقەگوڵ", "https://allekok.github.io/taqe-gull/#.",
 	 "گوڵنامەی کوردی",
 	 "https://github.com/allekok/taqe-gull"],
 	["خدر قادری", "https://allekok.github.io/xdr-qadri/#.",
 	 "بەرهەمەکانی بەیت‌بێژ خدر قادری",
 	 "https://github.com/allekok/xile-derzi"],
-	["زیرەک", "https://allekok.github.io/zirek/#.",
-	 "بەرهەمەکانی حەسەن زیرەک",
-	 "https://github.com/allekok/zirek"],
 	["تاهیر تۆفیق", "https://allekok.github.io/tahir-tofiq/#.",
 	 "بەرهەمەکانی تاهیر تۆفیق",
 	 "https://github.com/allekok/tahir-tofiq"],
@@ -38,12 +37,16 @@ const repos = [
 	["ماملێ", "https://allekok.github.io/mamle/#.",
 	 "بەرهەمەکانی محەممەد ماملێ",
 	 "https://github.com/allekok/mamle"],
-	["گۆڕینی ئەلفوبێ", "https://allekok.github.io/kurdish-transliterator/",
-	 "گۆڕینی ئەلفوبێی نووسراوەی کوردی لە عەرەبی بۆ لاتین و فارسی",
-	 "https://github.com/allekok/kurdish-transliterator"],
-	["ڕۆژژمێری کوردی", "https://allekok.github.io/kurdish-calendar/",
-	 "نیشاندانی ڕێکەوتی ئەمڕۆ + گۆڕینی ڕێکەوتەکانی کوردی، گریگۆری، ئێرانی و ئیسلامی بۆ یەکتر",
-	 "https://github.com/allekok/kurdish-calendar"],
+	["زیرەک", "https://allekok.github.io/zirek/#.",
+	 "بەرهەمەکانی حەسەن زیرەک",
+	 "https://github.com/allekok/zirek"],
+	["وەشانی ساکاری ئاڵەکۆک",
+	 "https://allekok.github.io/allekok-poems/",
+	 "شێعرەکانی ئاڵەکۆک",
+	 "https://github.com/allekok/allekok-poems"],
+	["کەناڵی یوتیوبی ئاڵەکۆک",
+	 "https://www.youtube.com/channel/UCmddsfgce634kv7Mve7jWhA",
+	 "فێرکاری کامپیوتێر و بەرنامەنووسی"],
 ];
 
 const _files = [
@@ -123,9 +126,15 @@ if(_script)
 		$html = "<ul>";
 		foreach($repos as $repo) {
 			$html .= "<li>
-			<div class='tool'>
-                        <a class='tool-repo' href='{$repo[3]}'
-                        ><i class='icon'>&lsaquo;&rsaquo;</i></a>
+			<div class='tool'>";
+			
+			if(isset($repo[3]))
+				$html .= "<a class='tool-repo' href='{$repo[3]}'
+                        ><i class='icon'>&lsaquo;&rsaquo;</i></a>";
+			else
+				$html .= "<a class='tool-repo'> </a>";
+			
+			$html .= "
 			<a class='tool-link' href='{$repo[1]}'>
 			<h2 class='tool-title'>
 			{$repo[0]}

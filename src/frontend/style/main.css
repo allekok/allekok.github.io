@@ -64,22 +64,22 @@ ul
 .tool
 {
 	display:flex;
-	padding:.5em 0;
+	padding:.25em 0;
 	border-bottom:1px solid
 }
 .tool-title
 {
 	color:#070;
 	display:inline-block;
-	padding-right:.5em;
 }
 .tool-desc
 {
 	margin:auto;
 	font-size:.95em;
-	padding:0 1em;
+	padding:0 1em 0 0;
 	display:inline-block;
 	width:100%;
+	text-align:justify
 }
 .tool-link
 {
@@ -91,7 +91,6 @@ ul
 	display:inline-block;
 	font-style:normal;
 	font-size: 1.3em;
-	letter-spacing: 2px;
 }
 .tool-repo
 {
