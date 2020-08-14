@@ -1,0 +1,14 @@
+{
+    "name": "بەرنامەکانی ئاڵەکۆک",
+    "short_name": "ئاڵەکۆک",
+    "icons": [
+        {
+            "src": "/src/frontend/style/images/1.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}
