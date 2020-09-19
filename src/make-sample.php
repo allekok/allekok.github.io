@@ -35,7 +35,7 @@ const repos = [
 	 "بەرهەمەکانی عەلی مەردان",
 	 "https://github.com/allekok/eli-merdan"],
 	["ماملێ", "https://allekok.github.io/mamle/#.",
-	 "بەرهەمەکانی محەممەد ماملێ",
+	 "بەرهەمەکانی محەمەد ماملێ",
 	 "https://github.com/allekok/mamle"],
 	["زیرەک", "https://allekok.github.io/zirek/#.",
 	 "بەرهەمەکانی حەسەن زیرەک",
