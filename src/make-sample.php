@@ -52,7 +52,7 @@ const repos = [
 	 "نووسراوەکانی من لەسەر بابەتی جۆراوجۆر",
 	 "https://github.com/allekok/drafts"],
 	["کەناڵی یوتیوبی ئاڵەکۆک",
-	 "https://www.youtube.com/channel/UCmddsfgce634kv7Mve7jWhA",
+	 "https://youtube.com/channel/UCmddsfgce634kv7Mve7jWhA",
 	 "فێرکاری کامپیوتێر و بەرنامەنووسی"],
 ];
 
