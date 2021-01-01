@@ -48,11 +48,11 @@ a
 }
 a:hover, .tool-title:hover
 {
-	color:#070;
+	color:#090;
 }
 #main
 {
-	margin:auto;
+	margin:0 3em 0 0;
 }
 button
 {
@@ -64,40 +64,36 @@ button
 header h1
 {
 	display:inline-block;
-	margin:.5em 0 0;
+	margin:0;
 }
 header
 {
-	text-align:center;
-	font-size:2.3em;
+	font-size:2em;
 	margin:auto;
-}
-nav {
-	text-align:center;
-	border-bottom:3px solid;
-	padding:.5em 0;
 }
 footer
 {
-	padding:0 1em;
-	text-align:left;
-	margin:auto;
-	font-size:1.1em
+	text-align:center;
+	margin:1em 0 0;
+}
+footer a {
+	padding:.5em;
 }
 ul
 {
 	list-style-type: none;
 	padding:0;
+	margin:0;
 }
 .tool
 {
 	display:flex;
-	padding:.25em 0;
-	border-bottom:1px solid
+	padding:.75em 0;
+	border-bottom:1px solid #444;
 }
 .tool-title
 {
-	color:#070;
+	color:#060;
 	display:inline-block;
 }
 .tool-desc
@@ -119,6 +115,7 @@ ul
 	display:inline-block;
 	font-style:normal;
 	font-size: 1.3em;
+	height:0;
 }
 .tool-repo
 {
@@ -129,7 +126,7 @@ ul
 }
 ::selection
 {
-	background:#070;
+	background:#090;
 	color:#fff;
 }
 ::-webkit-scrollbar
@@ -138,7 +135,7 @@ ul
 }
 ::-webkit-scrollbar-thumb
 {
-	background:#070;
+	background:#090;
 }
 @media only screen and (min-width:600px)
 {
@@ -152,17 +149,13 @@ ul
 	</head>
 	<body>
 		<header>
-			<h1>بەرنامەکانی ئاڵەکۆک</h1>
+			<h1>بەرنامەکانی
+				<span style="color:#090">
+					ئاڵەکۆک
+				</span>
+				:
+			</h1>
 		</header>
-		<nav>
-			<a href="https://allekok.ir/docs/CONTACT">
-				پەیوەندی
-			</a>
-			 - 
-			<a href="https://allekok.github.io/donate/">
-				یارمەتیی ماڵی
-			</a>
-		</nav>
 		<main id="main">
 			<ul><li>
 			<div class='tool'><a class='tool-repo' href='https://github.com/allekok/allekok-website'
@@ -369,5 +362,16 @@ ul
 			</div>
 			</li></ul>
 		</main>
+		<footer>
+			<a href="https://allekok.github.io/donate/">
+				یارمەتیی ماڵی
+			</a>
+			<a href="https://allekok.ir/docs/CONTACT">
+				پەیوەندی
+			</a>
+			<a href="https://github.com/allekok/allekok.github.io">
+				کۆد
+			</a>
+		</footer>
 	</body>
 </html>
