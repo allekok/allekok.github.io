@@ -16,7 +16,7 @@ const repos = [
 	["ڕێبوار", "https://allekok.ir/rebwar/",
 	 "گەڕان بۆ ڕێنووسی دروستی وشە",
 	 "https://github.com/allekok/rebwar"],
-	["ڕۆژژمێری کوردی", "https://allekok.github.io/kurdish-calendar/",
+	["ڕۆژژمێری کوردی", "https://allekok.ir/kurdish-calendar/",
 	 "نیشاندانی ڕێکەوتی ئەمڕۆ + گۆڕینی ڕێکەوتەکانی کوردی، گریگۆری، ئێرانی و ئیسلامی بۆ یەکتر",
 	 "https://github.com/allekok/kurdish-calendar"],
 	["گۆڕینی ئەلفووبێ", "https://allekok.github.io/kurdish-transliterator/",
