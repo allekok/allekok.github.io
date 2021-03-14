@@ -2,7 +2,7 @@
 /* Constants */
 const repos = [
 	["ئاڵەکۆک", "https://allekok.ir/",
-	 "شێعری شاعیرانی کورد",
+	 "شیعری شاعیرانی کورد",
 	 "https://github.com/allekok/allekok-website"],
 	["ڕادیۆ", "https://allekok.github.io/radio/",
 	 "گۆرانیی کوردی",
@@ -48,7 +48,7 @@ const repos = [
 	 "https://github.com/allekok/zirek"],
 	["وەشانی ساکاری ئاڵەکۆک",
 	 "https://allekok.github.io/allekok-poems/",
-	 "شێعرەکانی ئاڵەکۆک",
+	 "شیعرەکانی ئاڵەکۆک",
 	 "https://github.com/allekok/allekok-poems"],
 	["ڕەشنووسەکانم",
 	 "https://allekok.github.io/drafts/",
