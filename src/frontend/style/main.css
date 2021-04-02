@@ -1,124 +1,102 @@
 {FONT_DECL}
-*
-{
+* {
 	box-sizing:border-box;
 	font-family:{FONT}, Arial;
 	font-size:inherit;
 }
-h1, h2, p
-{
-	margin:0;
+h1, h2, p {
 	font-weight:normal;
-}
-body
-{
-	font-size:13px;
-	color:#222;
 	margin:0;
-	padding:.5em;
+}
+body {
+	color:#222;
+	font-size:13px;
+	margin:0;
 	position:relative;
 }
-a
-{
+a {
 	color:#222;
 	text-decoration:none;
 }
-a:hover, .tool-title:hover
-{
+a:hover, .tool-title:hover {
 	color:#090;
 }
-#main
-{
-	margin:0 3em 0 0;
+#main {
+	margin:.5em .5em;
 }
-button
-{
-	appearance:none;
+button {
 	-webkit-appearance:none;
-	transition:all .2s ease;
 	-webkit-transition:all .2s ease;
+	appearance:none;
+	transition:all .2s ease;
 }
-header h1
-{
-	display:inline-block;
+header h1 {
 	margin:0;
 }
-header
-{
-	font-size:2em;
-	margin:auto;
-}
-footer
-{
+header {
+	background:#090;
+	color:#fff;
+	font-size:1.8rem;
+	padding:1em .5em;
 	text-align:center;
+}
+footer {
 	margin:1em 0 0;
+	text-align:center;
 }
 footer a {
 	padding:.5em;
 }
-ul
-{
+ul {
 	list-style-type: none;
-	padding:0;
 	margin:0;
+	padding:0;
 }
-.tool
-{
+.tool {
 	display:flex;
-	padding:.75em 0;
-	border-bottom:1px solid #444;
+	padding:.7em 0;
+	border-bottom:1px solid #CCC;
 }
-.tool-title
-{
-	color:#060;
+.tool-title {
+	color:#090;
 	display:inline-block;
 }
-.tool-desc
-{
-	margin:auto;
+.tool-desc {
+	display:inline-block;
 	font-size:.95em;
+	margin:auto;
 	padding:0 1em 0 0;
-	display:inline-block;
+	text-align:justify;
 	width:100%;
-	text-align:justify
 }
-.tool-link
-{
+.tool-link {
 	margin:auto;
 	min-width:35%;
 }
-.icon
-{
+.icon {
 	display:inline-block;
-	font-style:normal;
 	font-size: 1.3em;
+	font-style:normal;
 	height:0;
 }
-.tool-repo
-{
+.tool-repo {
+	font-size:1.3em;
+	margin:auto 0 auto .5em;
 	text-align:center;
-	font-size:1.2em;
 	width:6%;
-	margin:auto 0 auto 1em;
 }
-::selection
-{
+::selection {
 	background:#090;
 	color:#fff;
 }
-::-webkit-scrollbar
-{
+::-webkit-scrollbar {
 	background:#fff;
 }
-::-webkit-scrollbar-thumb
-{
+::-webkit-scrollbar-thumb {
 	background:#090;
 }
-@media only screen and (min-width:600px)
-{
-	body
-	{
+@media only screen and (min-width:600px) {
+	body {
 		font-size:16px;
-		padding:1em;
 	}
 }
