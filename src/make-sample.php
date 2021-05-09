@@ -136,15 +136,7 @@ if(_script)
 		$html = "<ul>";
 		foreach($repos as $repo) {
 			$html .= "<li>
-			<div class='tool'>";
-			
-			if(isset($repo[3]))
-				$html .= "<a class='tool-repo' href='{$repo[3]}'
-                        ><i class='icon'>&lsaquo;&rsaquo;</i></a>";
-			else
-				$html .= "<a class='tool-repo'> </a>";
-			
-			$html .= "
+			<div class='tool'>
 			<a class='tool-link' href='{$repo[1]}'>
 			<h2 class='tool-title'>
 			{$repo[0]}
@@ -165,8 +157,8 @@ if(_script)
 if(_service_worker)
 {
 	$sw = "<script>
-    if ('serviceWorker' in navigator)
-	navigator.serviceWorker.register('"._service_worker_path.
+			if ('serviceWorker' in navigator)
+				navigator.serviceWorker.register('"._service_worker_path.
 	      "', {scope: '"._service_worker_scope."'}); </script>";
 }
 

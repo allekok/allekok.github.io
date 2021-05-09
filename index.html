@@ -12,8 +12,8 @@
 		<link rel="manifest" href="src/frontend/style/images/site.webmanifest">
 		<meta name="source-code" content="https://github.com/allekok/allekok.github.io">
 		<script>
-    if ('serviceWorker' in navigator)
-	navigator.serviceWorker.register('/service-worker.js', {scope: '/'}); </script>
+			if ('serviceWorker' in navigator)
+				navigator.serviceWorker.register('/service-worker.js', {scope: '/'}); </script>
 		<style>@font-face
 {
     font-family:'kurd';
@@ -31,44 +31,46 @@ h1, h2, p {
 	font-weight:normal;
 	margin:0;
 }
+html {
+	font-size:13px;
+}
 body {
 	color:#222;
-	font-size:13px;
+	font-size:inherit;
 	margin:0;
-	position:relative;
+	text-align:center;
 }
 a {
-	color:#222;
+	background:#1ec100;
+	border-radius:.5rem;
+	color:#FFF;
 	text-decoration:none;
 }
-a:hover, .tool-title:hover {
-	color:#090;
+a:hover {
+	background:rgba(30,193,0,.7);
 }
-#main {
-	margin:.5em 1em;
-}
-button {
-	-webkit-appearance:none;
-	-webkit-transition:all .2s ease;
-	appearance:none;
-	transition:all .2s ease;
+header {
+	background:#1ec100;
+	color:#fff;
+	padding:1rem 0 .5rem 0;
 }
 header h1 {
 	margin:0;
+	font-size:1.85rem;
 }
-header {
-	background:#090;
-	color:#fff;
-	font-size:1.8rem;
-	padding:1em .5em;
-	text-align:center;
+nav {
+	font-size:.9rem;
+	font-weight:bold;
 }
-footer {
-	margin:1em 0;
-	text-align:center;
+nav a {
+	display:inline-block;
+	padding:.5rem;
 }
-footer a {
-	padding:.5em;
+nav a:hover {
+	background:rgba(255,255,255,.2);
+}
+#main {
+	padding:1rem;
 }
 ul {
 	list-style-type: none;
@@ -76,50 +78,45 @@ ul {
 	padding:0;
 }
 .tool {
-	display:flex;
-	padding:.7em 0;
-	border-bottom:1px solid #CCC;
-}
-.tool-title {
-	color:#090;
-	display:inline-block;
-}
-.tool-desc {
-	display:inline-block;
-	font-size:.95em;
-	margin:auto;
-	padding:0 1em 0 0;
-	text-align:justify;
-	width:100%;
+	padding:0 0 1.7rem;
+	text-align:right;
 }
 .tool-link {
-	margin:auto;
-	min-width:35%;
+	display:inline-block;
+	font-size:1.2rem;
+	padding:.3rem 1rem;
+	background:#1ec100;
+	color:#FFF;
+}
+.tool-title {
+	display:inline;
+}
+.tool-desc {
+	color:#555;
+	font-size:.95rem;
+	padding:.5rem 1rem 0 0;
+	text-align:justify;
+}
+.tool-repo {
+	font-size:2rem;
 }
 .icon {
 	display:inline-block;
-	font-size: 1.3em;
 	font-style:normal;
 	height:0;
 }
-.tool-repo {
-	font-size:1.3em;
-	margin:auto 0 auto .5em;
-	text-align:center;
-	width:6%;
-}
 ::selection {
-	background:#090;
+	background:#1ec100;
 	color:#fff;
 }
 ::-webkit-scrollbar {
 	background:#fff;
 }
 ::-webkit-scrollbar-thumb {
-	background:#090;
+	background:#1ec100;
 }
-@media only screen and (min-width:600px) {
-	body {
+@media only screen and (min-width:400px) {
+	html {
 		font-size:16px;
 	}
 }
@@ -128,11 +125,21 @@ ul {
 	<body>
 		<header>
 			<h1>بەرنامەکانی ئاڵەکۆک</h1>
+			<nav>
+				<a href="https://github.com/allekok/allekok.github.io">
+					کۆد
+				</a>
+				<a href="https://allekok.ir/docs/CONTACT">
+					پەیوەندی
+				</a>
+				<a href="https://allekok.github.io/donate/">
+					یارمەتیی ماڵی
+				</a>
+			</nav>
 		</header>
 		<main id="main">
 			<ul><li>
-			<div class='tool'><a class='tool-repo' href='https://github.com/allekok/allekok-website'
-                        ><i class='icon'>&lsaquo;&rsaquo;</i></a>
+			<div class='tool'>
 			<a class='tool-link' href='https://allekok.ir/'>
 			<h2 class='tool-title'>
 			ئاڵەکۆک
@@ -143,8 +150,7 @@ ul {
 			</p>
 			</div>
 			</li><li>
-			<div class='tool'><a class='tool-repo' href='https://github.com/allekok/radio'
-                        ><i class='icon'>&lsaquo;&rsaquo;</i></a>
+			<div class='tool'>
 			<a class='tool-link' href='https://allekok.github.io/radio/'>
 			<h2 class='tool-title'>
 			ڕادیۆ
@@ -155,8 +161,7 @@ ul {
 			</p>
 			</div>
 			</li><li>
-			<div class='tool'><a class='tool-repo' href='https://github.com/allekok/tewar-2'
-                        ><i class='icon'>&lsaquo;&rsaquo;</i></a>
+			<div class='tool'>
 			<a class='tool-link' href='https://allekok.ir/tewar/'>
 			<h2 class='tool-title'>
 			تەوار - وەشانی ٢
@@ -167,8 +172,7 @@ ul {
 			</p>
 			</div>
 			</li><li>
-			<div class='tool'><a class='tool-repo' href='https://github.com/allekok/tewar-legacy'
-                        ><i class='icon'>&lsaquo;&rsaquo;</i></a>
+			<div class='tool'>
 			<a class='tool-link' href='https://allekok.ir/tewar-legacy/'>
 			<h2 class='tool-title'>
 			تەوار
@@ -179,8 +183,7 @@ ul {
 			</p>
 			</div>
 			</li><li>
-			<div class='tool'><a class='tool-repo' href='https://github.com/allekok/rebwar'
-                        ><i class='icon'>&lsaquo;&rsaquo;</i></a>
+			<div class='tool'>
 			<a class='tool-link' href='https://allekok.ir/rebwar/'>
 			<h2 class='tool-title'>
 			ڕێبوار
@@ -191,8 +194,7 @@ ul {
 			</p>
 			</div>
 			</li><li>
-			<div class='tool'><a class='tool-repo' href='https://github.com/allekok/kurdish-calendar'
-                        ><i class='icon'>&lsaquo;&rsaquo;</i></a>
+			<div class='tool'>
 			<a class='tool-link' href='https://allekok.ir/kurdish-calendar/site/'>
 			<h2 class='tool-title'>
 			ڕۆژژمێری کوردی
@@ -203,8 +205,7 @@ ul {
 			</p>
 			</div>
 			</li><li>
-			<div class='tool'><a class='tool-repo' href='https://github.com/allekok/kurdish-transliterator'
-                        ><i class='icon'>&lsaquo;&rsaquo;</i></a>
+			<div class='tool'>
 			<a class='tool-link' href='https://allekok.github.io/kurdish-transliterator/'>
 			<h2 class='tool-title'>
 			گۆڕینی ئەلفووبێ
@@ -215,8 +216,7 @@ ul {
 			</p>
 			</div>
 			</li><li>
-			<div class='tool'><a class='tool-repo' href='https://github.com/allekok/haw-serwa'
-                        ><i class='icon'>&lsaquo;&rsaquo;</i></a>
+			<div class='tool'>
 			<a class='tool-link' href='https://allekok.ir/haw-serwa/'>
 			<h2 class='tool-title'>
 			هاوسەروا
@@ -227,8 +227,7 @@ ul {
 			</p>
 			</div>
 			</li><li>
-			<div class='tool'><a class='tool-repo' href='https://github.com/allekok/kurdish-number-to-words'
-                        ><i class='icon'>&lsaquo;&rsaquo;</i></a>
+			<div class='tool'>
 			<a class='tool-link' href='https://allekok.github.io/kurdish-number-to-words/'>
 			<h2 class='tool-title'>
 			گۆڕینی ژمارە بۆ وشە
@@ -239,8 +238,7 @@ ul {
 			</p>
 			</div>
 			</li><li>
-			<div class='tool'><a class='tool-repo' href='https://github.com/allekok/taqe-gull'
-                        ><i class='icon'>&lsaquo;&rsaquo;</i></a>
+			<div class='tool'>
 			<a class='tool-link' href='https://allekok.github.io/taqe-gull/#.'>
 			<h2 class='tool-title'>
 			تاقەگوڵ
@@ -251,8 +249,7 @@ ul {
 			</p>
 			</div>
 			</li><li>
-			<div class='tool'><a class='tool-repo' href='https://github.com/allekok/xile-derzi'
-                        ><i class='icon'>&lsaquo;&rsaquo;</i></a>
+			<div class='tool'>
 			<a class='tool-link' href='https://allekok.github.io/xdr-qadri/#.'>
 			<h2 class='tool-title'>
 			خدر قادری
@@ -263,8 +260,7 @@ ul {
 			</p>
 			</div>
 			</li><li>
-			<div class='tool'><a class='tool-repo' href='https://github.com/allekok/tahir-tofiq'
-                        ><i class='icon'>&lsaquo;&rsaquo;</i></a>
+			<div class='tool'>
 			<a class='tool-link' href='https://allekok.github.io/tahir-tofiq/#.'>
 			<h2 class='tool-title'>
 			تاهیر تۆفیق
@@ -275,8 +271,7 @@ ul {
 			</p>
 			</div>
 			</li><li>
-			<div class='tool'><a class='tool-repo' href='https://github.com/allekok/eli-merdan'
-                        ><i class='icon'>&lsaquo;&rsaquo;</i></a>
+			<div class='tool'>
 			<a class='tool-link' href='https://allekok.github.io/eli-merdan/#.'>
 			<h2 class='tool-title'>
 			عەلی مەردان
@@ -287,8 +282,7 @@ ul {
 			</p>
 			</div>
 			</li><li>
-			<div class='tool'><a class='tool-repo' href='https://github.com/allekok/mamle'
-                        ><i class='icon'>&lsaquo;&rsaquo;</i></a>
+			<div class='tool'>
 			<a class='tool-link' href='https://allekok.github.io/mamle/#.'>
 			<h2 class='tool-title'>
 			ماملێ
@@ -299,8 +293,7 @@ ul {
 			</p>
 			</div>
 			</li><li>
-			<div class='tool'><a class='tool-repo' href='https://github.com/allekok/zirek'
-                        ><i class='icon'>&lsaquo;&rsaquo;</i></a>
+			<div class='tool'>
 			<a class='tool-link' href='https://allekok.github.io/zirek/#.'>
 			<h2 class='tool-title'>
 			زیرەک
@@ -311,8 +304,7 @@ ul {
 			</p>
 			</div>
 			</li><li>
-			<div class='tool'><a class='tool-repo' href='https://github.com/allekok/allekok-poems'
-                        ><i class='icon'>&lsaquo;&rsaquo;</i></a>
+			<div class='tool'>
 			<a class='tool-link' href='https://allekok.github.io/allekok-poems/'>
 			<h2 class='tool-title'>
 			وەشانی ساکاری ئاڵەکۆک
@@ -323,8 +315,7 @@ ul {
 			</p>
 			</div>
 			</li><li>
-			<div class='tool'><a class='tool-repo' href='https://github.com/allekok/drafts'
-                        ><i class='icon'>&lsaquo;&rsaquo;</i></a>
+			<div class='tool'>
 			<a class='tool-link' href='https://allekok.github.io/drafts/'>
 			<h2 class='tool-title'>
 			ڕەشنووسەکانم
@@ -335,7 +326,7 @@ ul {
 			</p>
 			</div>
 			</li><li>
-			<div class='tool'><a class='tool-repo'> </a>
+			<div class='tool'>
 			<a class='tool-link' href='https://youtube.com/channel/UCmddsfgce634kv7Mve7jWhA'>
 			<h2 class='tool-title'>
 			کەناڵی یوتیوبی ئاڵەکۆک
@@ -347,16 +338,5 @@ ul {
 			</div>
 			</li></ul>
 		</main>
-		<footer>
-			<a href="https://allekok.github.io/donate/">
-				یارمەتیی ماڵی
-			</a>
-			<a href="https://allekok.ir/docs/CONTACT">
-				پەیوەندی
-			</a>
-			<a href="https://github.com/allekok/allekok.github.io">
-				کۆد
-			</a>
-		</footer>
 	</body>
 </html>

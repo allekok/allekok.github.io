@@ -8,44 +8,46 @@ h1, h2, p {
 	font-weight:normal;
 	margin:0;
 }
+html {
+	font-size:13px;
+}
 body {
 	color:#222;
-	font-size:13px;
+	font-size:inherit;
 	margin:0;
-	position:relative;
+	text-align:center;
 }
 a {
-	color:#222;
+	background:#1ec100;
+	border-radius:.5rem;
+	color:#FFF;
 	text-decoration:none;
 }
-a:hover, .tool-title:hover {
-	color:#090;
+a:hover {
+	background:rgba(30,193,0,.7);
 }
-#main {
-	margin:.5em 1em;
-}
-button {
-	-webkit-appearance:none;
-	-webkit-transition:all .2s ease;
-	appearance:none;
-	transition:all .2s ease;
+header {
+	background:#1ec100;
+	color:#fff;
+	padding:1rem 0 .5rem 0;
 }
 header h1 {
 	margin:0;
+	font-size:1.85rem;
 }
-header {
-	background:#090;
-	color:#fff;
-	font-size:1.8rem;
-	padding:1em .5em;
-	text-align:center;
+nav {
+	font-size:.9rem;
+	font-weight:bold;
 }
-footer {
-	margin:1em 0;
-	text-align:center;
+nav a {
+	display:inline-block;
+	padding:.5rem;
 }
-footer a {
-	padding:.5em;
+nav a:hover {
+	background:rgba(255,255,255,.2);
+}
+#main {
+	padding:1rem;
 }
 ul {
 	list-style-type: none;
@@ -53,50 +55,45 @@ ul {
 	padding:0;
 }
 .tool {
-	display:flex;
-	padding:.7em 0;
-	border-bottom:1px solid #CCC;
-}
-.tool-title {
-	color:#090;
-	display:inline-block;
-}
-.tool-desc {
-	display:inline-block;
-	font-size:.95em;
-	margin:auto;
-	padding:0 1em 0 0;
-	text-align:justify;
-	width:100%;
+	padding:0 0 1.7rem;
+	text-align:right;
 }
 .tool-link {
-	margin:auto;
-	min-width:35%;
+	display:inline-block;
+	font-size:1.2rem;
+	padding:.3rem 1rem;
+	background:#1ec100;
+	color:#FFF;
+}
+.tool-title {
+	display:inline;
+}
+.tool-desc {
+	color:#555;
+	font-size:.95rem;
+	padding:.5rem 1rem 0 0;
+	text-align:justify;
+}
+.tool-repo {
+	font-size:2rem;
 }
 .icon {
 	display:inline-block;
-	font-size: 1.3em;
 	font-style:normal;
 	height:0;
 }
-.tool-repo {
-	font-size:1.3em;
-	margin:auto 0 auto .5em;
-	text-align:center;
-	width:6%;
-}
 ::selection {
-	background:#090;
+	background:#1ec100;
 	color:#fff;
 }
 ::-webkit-scrollbar {
 	background:#fff;
 }
 ::-webkit-scrollbar-thumb {
-	background:#090;
+	background:#1ec100;
 }
-@media only screen and (min-width:600px) {
-	body {
+@media only screen and (min-width:400px) {
+	html {
 		font-size:16px;
 	}
 }
