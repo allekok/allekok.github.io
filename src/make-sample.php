@@ -69,6 +69,9 @@ const _files = [
 	],
 ];
 
+const _README = true;
+const _README_path = '../README';
+
 const _script = true;
 const _script_needle = '{SCRIPT}';
 
@@ -108,9 +111,23 @@ const _font_icon_decl = "@font-face
 }";
 
 /* Make */
+$readme = '';
 $scripts = '';
 $styles = '';
 $sw = '';
+
+/* README */
+if(_README)
+{
+	$readme .= "بەرنامەکانی ئاڵەکۆک";
+	foreach(repos as $r) {
+		if(!isset($r[3]))
+			$r[3] = $r[1];
+		$readme .= "\n\n- $r[0]\n  $r[3]";
+	}
+	$readme = $readme . "\n";
+	file_put_contents(_README_path, $readme);
+}
 
 if(_style)
 {
@@ -165,7 +182,7 @@ if(_service_worker)
 	      "', {scope: '"._service_worker_scope."'}); </script>";
 }
 
-// Replace 
+/* Replace */
 foreach(_files as $f)
 {
 	$text = file_get_contents($f['in']);
