@@ -125,7 +125,7 @@ if(_README)
 			$r[3] = $r[1];
 		$readme .= "\n\n- $r[0]\n  $r[3]";
 	}
-	$readme = $readme . "\n";
+	$readme .= "\n";
 	file_put_contents(_README_path, $readme);
 }
 
