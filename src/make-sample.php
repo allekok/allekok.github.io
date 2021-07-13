@@ -70,7 +70,7 @@ const _files = [
 ];
 
 const _README = true;
-const _README_path = '../README';
+const _README_path = '../README.md';
 
 const _script = true;
 const _script_needle = '{SCRIPT}';
@@ -119,11 +119,12 @@ $sw = '';
 /* README */
 if(_README)
 {
-	$readme .= "بەرنامەکانی ئاڵەکۆک";
+	$readme .= "<div dir=rtl>\n\n";
+	$readme .= "# بەرنامەکانی ئاڵەکۆک";
 	foreach(repos as $r) {
 		if(!isset($r[3]))
 			$r[3] = $r[1];
-		$readme .= "\n\n- $r[0]\n  $r[3]";
+		$readme .= "\n\n- [$r[0]]($r[3])";
 	}
 	$readme .= "\n";
 	file_put_contents(_README_path, $readme);
