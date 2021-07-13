@@ -122,7 +122,7 @@ if(_README)
 	$readme .= "<div dir=rtl>\n\n";
 	$readme .= "# بەرنامەکانی ئاڵەکۆک";
 	foreach(repos as $r) {
-		$readme .= "\n\n- [$r[0]]($r[1])";
+		$readme .= "\n\n- [$r[0]]($r[1])  ";
 		$readme .= "\n  $r[2]  \n";
 		if(isset($r[3]))
 			$readme .= "  [کۆد]($r[3])  ";
