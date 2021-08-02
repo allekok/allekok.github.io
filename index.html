@@ -35,42 +35,47 @@ html {
 	font-size:13px;
 }
 body {
-	color:#222;
+	color:#FFF;
 	font-size:inherit;
 	margin:0;
 	text-align:center;
+	background:#1ec100;
 }
 a {
-	background:#1ec100;
 	border-radius:.5rem;
 	color:#FFF;
 	text-decoration:none;
 }
 a:hover {
-	background:rgba(30,193,0,.7);
+	background:rgba(255,255,255,.85);
 }
 header {
-	background:#1ec100;
-	color:#fff;
-	padding:1rem 0 .5rem 0;
+	color:#FFF;
+	padding:1.5rem 0 .5rem 0;
 }
 header h1 {
 	margin:0;
-	font-size:1.85rem;
+	font-size:2rem;
+}
+footer {
+	margin-bottom:2rem;
 }
 nav {
-	font-size:.9rem;
-	font-weight:bold;
+	font-size:1rem;
 }
 nav a {
 	display:inline-block;
-	padding:.5rem;
+	padding:.3rem;
+	margin:0 .5rem;
 }
 nav a:hover {
 	background:rgba(255,255,255,.2);
+	border-radius:.2rem;
 }
 #main {
 	padding:1rem;
+	max-width:800px;
+	margin:auto;
 }
 ul {
 	list-style-type: none;
@@ -78,42 +83,40 @@ ul {
 	padding:0;
 }
 .tool {
-	padding:0 0 1.7rem;
+	padding:1rem;
+	margin-bottom:2rem;
 	text-align:right;
+	box-shadow:0 0 6rem -2rem rgba(255,255,255,.5);
 }
 .tool-link {
 	display:inline-block;
 	font-size:1.2rem;
 	padding:.3rem 1rem;
-	background:#1ec100;
-	color:#FFF;
+	background:#FFF;
+	color:#1ec100;
 }
 .tool-title {
 	display:inline;
 }
 .tool-desc {
-	color:#555;
-	font-size:.95rem;
-	padding:.5rem 1rem 0 0;
+	font-size:1rem;
+	padding:1rem 0 0;
 	text-align:justify;
 }
-.tool-repo {
-	font-size:2rem;
-}
-.icon {
-	display:inline-block;
-	font-style:normal;
-	height:0;
-}
 ::selection {
-	background:#1ec100;
-	color:#fff;
+	background:#FFF;
+	color:#1ec100;
 }
 ::-webkit-scrollbar {
-	background:#fff;
+	width:.8rem;
+	background:#1ec100;
 }
 ::-webkit-scrollbar-thumb {
-	background:#1ec100;
+	background:rgba(255,255,255,.4);
+	border-radius:1rem;
+}
+::-webkit-scrollbar-track {
+	margin:.1rem 0;
 }
 @media only screen and (min-width:400px) {
 	html {
@@ -125,17 +128,6 @@ ul {
 	<body>
 		<header>
 			<h1>بەرنامەکانی ئاڵەکۆک</h1>
-			<nav>
-				<a href="https://github.com/allekok/allekok.github.io">
-					کۆد
-				</a>
-				<a href="https://allekok.ir/docs/CONTACT">
-					پەیوەندی
-				</a>
-				<a href="https://allekok.github.io/donate/">
-					یارمەتیی ماڵی
-				</a>
-			</nav>
 		</header>
 		<main id="main">
 			<ul><li>
@@ -349,5 +341,18 @@ ul {
 			</div>
 			</li></ul>
 		</main>
+		<footer>
+			<nav>
+				<a href="https://github.com/allekok/allekok.github.io">
+					کۆد
+				</a>
+				<a href="https://allekok.ir/docs/CONTACT">
+					پەیوەندی
+				</a>
+				<a href="https://allekok.github.io/donate/">
+					یارمەتیی ماڵی
+				</a>
+			</nav>
+		</footer>
 	</body>
 </html>
