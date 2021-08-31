@@ -22,6 +22,10 @@
   گەڕان بۆ ڕێنووسی دروستی وشە  
   [کۆد](https://github.com/allekok/rebwar)  
 
+- [ستاندارد کردنی نووسراوە](https://allekok.github.io/normalize/)  
+  ستاندارد کردنی شێوەی نووسراوەی کوردی  
+  [کۆد](https://github.com/allekok/normalize)  
+
 - [ڕۆژژمێری کوردی](https://allekok.ir/kurdish-calendar/site/)  
   نیشاندانی ڕێکەوتی ئەمڕۆ + گۆڕینی ڕێکەوتەکانی کوردی، گریگۆری، ئێرانی و ئیسلامی بۆ یەکتر  
   [کۆد](https://github.com/allekok/kurdish-calendar)  
