@@ -1,33 +1,18 @@
-/* Caching static resources */
-const cache_ver = 'v1';
+const cache_ver = 'v2'
 
-self.addEventListener('install', function(event) {
-	event.waitUntil(
-		caches.open(cache_ver).then(function(cache) {
-			return cache.addAll([
-				'/src/frontend/style/DroidNaskh-Regular.woff2',
-			]);
-		}));
-});
+self.addEventListener('install', event =>
+	event.waitUntil(caches.open(cache_ver).then(cache => 
+		cache.addAll([
+			'/src/frontend/style/DroidNaskh-Regular.woff2'
+		]))))
 
-self.addEventListener('activate', function(event) {
-	const cacheWhitelist = [cache_ver];
-	event.waitUntil(
-		caches.keys().then(function(keyList) {
-			return Promise.all(keyList.map(function(key) {
-				if(cacheWhitelist.indexOf(key) === -1)
-					return caches.delete(key);
-			}));
-		}));
-});
+self.addEventListener('activate', event => event.waitUntil(
+	caches.keys().then(keyList => 
+		Promise.all(keyList.map(key => {
+			if(key == cache_ver)
+				return caches.delete(key)
+		})))))
 
-self.addEventListener('fetch', function(event) {
-	event.respondWith(
-		caches.match(event.request).then(function(resp) {
-			return resp || fetch(event.request).then(function(response) {
-				return response;
-			});
-		}).catch(function() {
-			return '';
-		}));
-});
+self.addEventListener('fetch', event => event.respondWith(
+	caches.match(event.request).then(resp => 
+		resp || fetch(event.request).then(r => r))))
