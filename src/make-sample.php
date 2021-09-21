@@ -9,6 +9,11 @@ const repos = [
 	 "https://allekok.github.io/radio/",
 	 "گۆرانیی کوردی",
 	 "https://github.com/allekok/radio"],
+	["ڕۆژژمێری کوردی",
+	 "https://allekok.ir/kurdish-calendar/site/",
+	 "نیشاندانی ڕێکەوتی ئەمڕۆ + " .
+	 "گۆڕینی ڕێکەوتەکانی کوردی، گریگۆری، ئێرانی و ئیسلامی بۆ یەکتر",
+	 "https://github.com/allekok/kurdish-calendar"],
 	["تەوار - وەشانی ٢",
 	 "https://allekok.ir/tewar/",
 	 "گەڕان بۆ واتای وشە لە چەند فەرهەنگ‌دا",
@@ -25,11 +30,6 @@ const repos = [
 	 "https://allekok.github.io/normalize/",
 	 "ستاندارد کردنی شێوەی نووسراوەی کوردی",
 	 "https://github.com/allekok/normalize"],
-	["ڕۆژژمێری کوردی",
-	 "https://allekok.ir/kurdish-calendar/site/",
-	 "نیشاندانی ڕێکەوتی ئەمڕۆ + " .
-	 "گۆڕینی ڕێکەوتەکانی کوردی، گریگۆری، ئێرانی و ئیسلامی بۆ یەکتر",
-	 "https://github.com/allekok/kurdish-calendar"],
 	["گۆڕینی ئەلفووبێ",
 	 "https://allekok.github.io/kurdish-transliterator/",
 	 "گۆڕینی ئەلفووبێی نووسراوەی کوردی لە عەرەبی بۆ لاتین و فارسی",
