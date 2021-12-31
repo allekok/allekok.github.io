@@ -1,4 +1,9 @@
 {FONT_DECL}
+:root {
+	--back:#EEE;
+	--fore:#000;
+	--spec:#090;
+}
 * {
 	box-sizing:border-box;
 	font-family:{FONT}, Arial;
@@ -12,30 +17,28 @@ html {
 	font-size:13px;
 }
 body {
-	color:#FFF;
+	background:var(--back);
+	color:var(--fore);
 	font-size:inherit;
 	margin:0;
 	text-align:center;
-	background:#1ec100;
 }
 a {
-	border-radius:.5rem;
-	color:#FFF;
 	text-decoration:none;
+	color:var(--fore);
 }
 a:hover {
-	background:rgba(255,255,255,.85);
+	color:var(--spec);
 }
 header {
-	color:#FFF;
-	padding:1.5rem 0 .5rem 0;
+	padding:1.5rem 0 0;
 }
 header h1 {
 	margin:0;
-	font-size:2rem;
+	font-size:1.9rem;
 }
 footer {
-	margin-bottom:2rem;
+	margin-bottom:1rem;
 }
 nav {
 	font-size:1rem;
@@ -44,10 +47,6 @@ nav a {
 	display:inline-block;
 	padding:.3rem;
 	margin:0 .5rem;
-}
-nav a:hover {
-	background:rgba(255,255,255,.2);
-	border-radius:.2rem;
 }
 #main {
 	padding:1rem;
@@ -60,36 +59,32 @@ ul {
 	padding:0;
 }
 .tool {
+	border-bottom:1px solid;
 	padding:1rem;
-	margin-bottom:2rem;
 	text-align:right;
-	box-shadow:0 0 6rem -2rem rgba(255,255,255,.5);
 }
 .tool-link {
 	display:inline-block;
-	font-size:1.2rem;
-	padding:.3rem 1rem;
-	background:#FFF;
-	color:#1ec100;
+	color:var(--spec);
 }
 .tool-title {
 	display:inline;
 }
 .tool-desc {
+	display:inline;
 	font-size:1rem;
-	padding:1rem 0 0;
-	text-align:justify;
+	margin:auto .8rem;
 }
 ::selection {
-	background:#FFF;
-	color:#1ec100;
+	background:var(--spec);
+	color:var(--back);
 }
 ::-webkit-scrollbar {
 	width:.8rem;
-	background:#1ec100;
+	background:var(--back);
 }
 ::-webkit-scrollbar-thumb {
-	background:rgba(255,255,255,.4);
+	background:var(--spec);
 	border-radius:1rem;
 }
 ::-webkit-scrollbar-track {
