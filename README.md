@@ -79,5 +79,5 @@
   [کۆد](https://github.com/allekok/drafts)  
 
 - [کەناڵی یوتیوبی ئاڵەکۆک](https://youtube.com/channel/UCmddsfgce634kv7Mve7jWhA)  
-  فێرکاری کامپیوتێر و بەرنامەنووسی  
+  فێرکاری کامپیوتێر و نووسینی بەرنامە  
 
