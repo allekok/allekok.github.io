@@ -4,26 +4,34 @@
 		<title>
 			بەرنامەکانی ئاڵەکۆک
 		</title>
+
+		<!-- Metadata information -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
+		<meta name="description" content="بەرنامەکانی ئاڵەکۆک بۆ کوردزمانەکان">
+		<meta name="keywords" content="ئاڵەکۆک,بەرنامەی کوردی,کوردستان">
+
+		<!-- Google webmaster tools verification -->
 		<meta name="google-site-verification"
 		      content="UVQsQ38WiVTYYDrHWsUzN417TDEYDatv6mci-exP0JM">
-		<meta name="description" content="بەرنامەکانی ئاڵەکۆک">
-		<meta name="keywords"
-		      content="ئاڵەکۆک,بەرنامەی کوردی,کوردستان">
+
+		<!-- Logo -->
+		<meta content="src/frontend/style/images/1.png"
+		      itemprop="image">
 		<link rel="apple-touch-icon"
 		      href="src/frontend/style/images/1.png">
-		<meta property="og:image"
-		      content="src/frontend/style/images/1.png">
+
+		<!-- Manifest -->
 		<link rel="manifest"
 		      href="src/frontend/style/images/site.webmanifest">
+
+		<!-- Source code repository -->
 		<meta name="source-code"
 		      content="https://github.com/allekok/allekok.github.io">
-		
+
 		<script>
 	if('serviceWorker' in navigator)
 		navigator.serviceWorker.register('/service-worker.js', {scope: '/'}); </script>
-		
 		<style>
 @font-face {
 	font-family:'kurd';
@@ -33,9 +41,10 @@
 	src:url('src/frontend/style/DroidNaskh-Regular.woff2') format('woff2');
 }
 :root {
-	--back:#EEE;
-	--fore:#000;
-	--spec:#090;
+	--back:#FFFFFF;
+	--fore:#000000;
+	--spec:#9AFF00;
+	--dark:#00AA00;
 }
 * {
 	box-sizing:border-box;
@@ -48,6 +57,7 @@ h1, h2, p {
 }
 html {
 	font-size:13px;
+	line-height:2;
 }
 body {
 	background:var(--back);
@@ -59,9 +69,6 @@ body {
 a {
 	text-decoration:none;
 	color:var(--fore);
-}
-a:hover {
-	color:var(--spec);
 }
 header {
 	padding:1.5rem 0 0;
@@ -81,6 +88,9 @@ nav a {
 	padding:.3rem;
 	margin:0 .5rem;
 }
+nav a:hover {
+	color:var(--dark);
+}
 #main {
 	padding:1rem;
 	max-width:1000px;
@@ -90,26 +100,30 @@ ul {
 	list-style-type: none;
 	margin:0;
 	padding:0;
+	display:grid;
+	gap:1rem;
+	grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
 }
-.tool {
-	border-bottom:1px solid;
+li {
+	border:1px solid;
+	border-radius:1rem;
 	padding:1rem;
-	text-align:right;
 }
-.tool-link {
-	display:inline-block;
-	color:var(--spec);
+.tool-link:hover {
+	opacity:.8;
 }
 .tool-title {
-	display:inline;
+	background:var(--spec);
+	border-radius:1rem;
+	padding:.3rem 1rem;
+	margin:auto;
 }
 .tool-desc {
-	display:inline;
-	font-size:1rem;
-	margin:auto .8rem;
+	font-size:.9rem;
+	padding-top:1rem;
 }
 ::selection {
-	background:var(--spec);
+	background:var(--dark);
 	color:var(--back);
 }
 ::-webkit-scrollbar {
@@ -117,7 +131,7 @@ ul {
 	background:var(--back);
 }
 ::-webkit-scrollbar-thumb {
-	background:var(--spec);
+	background:var(--dark);
 	border-radius:1rem;
 }
 ::-webkit-scrollbar-track {
@@ -129,7 +143,6 @@ ul {
 	}
 }
 </style>
-		
 	</head>
 	<body>
 		<header>

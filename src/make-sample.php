@@ -1,5 +1,5 @@
 <?php
-/* Constants */
+/* Configuration */
 const repos = [
 	["ئاڵەکۆک",
 	 "https://allekok.ir/",
@@ -85,8 +85,8 @@ const repos = [
 
 const _files = [
 	[
-		"out" => "../index.html",
 		"in" => "frontend/index.html",
+		"out" => "../index.html",
 	],
 ];
 
@@ -120,26 +120,33 @@ const _font_decl = "
 }";
 
 /* Make */
+
 $readme = "";
+$style = "";
 $body = "";
-$styles = "";
 $sw = "";
 
 if(_README) {
 	$readme .= "<div dir=rtl>\n\n";
 	$readme .= "# بەرنامەکانی ئاڵەکۆک";
-	foreach(repos as $r) {
-		$readme .= "\n\n- [$r[0]]($r[1])  ";
-		$readme .= "\n  $r[2]  \n";
-		if(isset($r[3]))
-			$readme .= "  [کۆد]($r[3])  ";
+	foreach(repos as $repo) {
+		$title = $repo[0];
+		$url = $repo[1];
+		$desc = $repo[2];
+		$source = isset($repo[3]) ? $repo[3] : null;
+
+		$readme .= "\n\n- [$title]($url)  ";
+		$readme .= "\n  $desc  \n";
+
+		if($source)
+			$readme .= "  [کۆد]($source)  ";
 	}
 	$readme .= "\n";
 	file_put_contents(_README_path, $readme);
 }
 
 if(_style) {
-	$styles = file_get_contents(_style_path);
+	$style = file_get_contents(_style_path);
 	if(_font) {
 		$font_decl = _font_decl;
 		$font_name = "'"._font_name."'";
@@ -147,25 +154,29 @@ if(_style) {
 		$font_decl = "";
 		$font_name = "";
 	}
-	$styles = str_replace([_font_decl_needle, _font_needle],
-			      [$font_decl, $font_name],
-			      $styles);
-	$styles = "<style>{$styles}</style>";
+	$style = str_replace([_font_decl_needle, _font_needle],
+			     [$font_decl, $font_name],
+			     $style);
+	$style = "<style>{$style}</style>";
 }
 
 if(_body) {
-	function paint($repos) {
+	function convert_to_html($repos) {
 		$html = "<ul>";
 		foreach($repos as $repo) {
+			$title = $repo[0];
+			$url = $repo[1];
+			$desc = $repo[2];
+
 			$html .= "<li>
 			<div class='tool'>
-			<a class='tool-link' href='{$repo[1]}'>
+			<a class='tool-link' href='{$url}'>
 			<h2 class='tool-title'>
-			{$repo[0]}
+			{$title}
 			</h2>
 			</a>
 			<p class='tool-desc'>
-			{$repo[2]}
+			{$desc}
 			</p>
 			</div>
 			</li>";
@@ -173,7 +184,7 @@ if(_body) {
 		$html .= "</ul>";
 		return $html;
 	}
-	$body = paint(repos);
+	$body = convert_to_html(repos);
 }
 
 if(_service_worker) {
@@ -188,16 +199,13 @@ if(_service_worker) {
 
 /* Replace */
 foreach(_files as $f) {
-	$text = file_get_contents($f["in"]);
-	
-	$text = str_replace([_body_needle,
-			     _style_needle,
-			     _service_worker_needle],
-			    [$body, $styles, $sw],
-			    $text);
-	
-	file_put_contents($f["out"], $text);
-	
-	echo "`{$f['out']}` Done.\n";
+	$input = file_get_contents($f["in"]);
+	$output = str_replace([_body_needle,
+			       _style_needle,
+			       _service_worker_needle],
+			      [$body, $style, $sw],
+			      $input);
+	file_put_contents($f["out"], $output);
+	echo "`{$f["out"]}` Done.\n";
 }
 ?>

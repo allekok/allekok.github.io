@@ -1,8 +1,9 @@
 {FONT_DECL}
 :root {
-	--back:#EEE;
-	--fore:#000;
-	--spec:#090;
+	--back:#FFFFFF;
+	--fore:#000000;
+	--spec:#9AFF00;
+	--dark:#00AA00;
 }
 * {
 	box-sizing:border-box;
@@ -15,6 +16,7 @@ h1, h2, p {
 }
 html {
 	font-size:13px;
+	line-height:2;
 }
 body {
 	background:var(--back);
@@ -26,9 +28,6 @@ body {
 a {
 	text-decoration:none;
 	color:var(--fore);
-}
-a:hover {
-	color:var(--spec);
 }
 header {
 	padding:1.5rem 0 0;
@@ -48,6 +47,9 @@ nav a {
 	padding:.3rem;
 	margin:0 .5rem;
 }
+nav a:hover {
+	color:var(--dark);
+}
 #main {
 	padding:1rem;
 	max-width:1000px;
@@ -57,26 +59,30 @@ ul {
 	list-style-type: none;
 	margin:0;
 	padding:0;
+	display:grid;
+	gap:1rem;
+	grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
 }
-.tool {
-	border-bottom:1px solid;
+li {
+	border:1px solid;
+	border-radius:1rem;
 	padding:1rem;
-	text-align:right;
 }
-.tool-link {
-	display:inline-block;
-	color:var(--spec);
+.tool-link:hover {
+	opacity:.8;
 }
 .tool-title {
-	display:inline;
+	background:var(--spec);
+	border-radius:1rem;
+	padding:.3rem 1rem;
+	margin:auto;
 }
 .tool-desc {
-	display:inline;
-	font-size:1rem;
-	margin:auto .8rem;
+	font-size:.9rem;
+	padding-top:1rem;
 }
 ::selection {
-	background:var(--spec);
+	background:var(--dark);
 	color:var(--back);
 }
 ::-webkit-scrollbar {
@@ -84,7 +90,7 @@ ul {
 	background:var(--back);
 }
 ::-webkit-scrollbar-thumb {
-	background:var(--spec);
+	background:var(--dark);
 	border-radius:1rem;
 }
 ::-webkit-scrollbar-track {
