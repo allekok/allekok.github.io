@@ -80,7 +80,10 @@ const repos = [
 	 "https://github.com/allekok/drafts"],
 	["کەناڵی یوتیوبی ئاڵەکۆک",
 	 "https://youtube.com/channel/UCmddsfgce634kv7Mve7jWhA",
-	 "فێرکاری کامپیوتێر و نووسینی بەرنامە"],
+	 "سەبارەت بە کامپیوتێر و نووسینی بەرنامە"],
+	["کەناڵی تێلێگرامی ئاڵەکۆک",
+	 "https://t.me/allekok_channel",
+	 "سەبارەت بە کامپیوتێر و نووسینی بەرنامە"],
 ];
 
 const _files = [
