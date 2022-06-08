@@ -32,7 +32,7 @@ const repos = [
 	 "https://github.com/allekok/normalize"],
 	["گۆڕینی ئەلفووبێ",
 	 "https://allekok.github.io/kurdish-transliterator/",
-	 "گۆڕینی ئەلفووبێی نووسراوەی کوردی لە عەرەبی بۆ لاتین و فارسی",
+	 "گۆڕینی ئەلفووبێی نووسراوەی کوردی لە عەرەبی بۆ لاتین و فارسی و سیریلیک",
 	 "https://github.com/allekok/kurdish-transliterator"],
 	["هاوسەروا",
 	 "https://allekok.ir/haw-serwa/",
