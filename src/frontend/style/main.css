@@ -15,7 +15,7 @@ h1, h2, p {
 	margin:0;
 }
 html {
-	font-size:13px;
+	font-size:16px;
 	line-height:2;
 }
 body {
@@ -61,21 +61,21 @@ ul {
 	padding:0;
 	display:grid;
 	gap:1rem;
-	grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+	grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
 }
 li {
 	border:1px solid;
 	border-radius:1rem;
 	padding:1rem;
 }
-.tool-link:hover {
-	opacity:.8;
-}
-.tool-title {
+.tool-link {
+	display:block;
 	background:var(--spec);
 	border-radius:1rem;
 	padding:.3rem 1rem;
-	margin:auto;
+}
+.tool-link:hover {
+	opacity:.8;
 }
 .tool-desc {
 	font-size:.9rem;
@@ -95,11 +95,6 @@ li {
 }
 ::-webkit-scrollbar-track {
 	margin:.1rem 0;
-}
-@media only screen and (min-width:400px) {
-	html {
-		font-size:16px;
-	}
 }
 @media (prefers-color-scheme:dark) {
 	:root {
